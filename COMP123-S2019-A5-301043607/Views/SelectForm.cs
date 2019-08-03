@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_S2019_A5_301043607.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace COMP123_S2019_A5_301043607.Views
         public SelectForm()
         {
             InitializeComponent();
+        }
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+            using (var db = new DollarComputersContext())
+            {
+
+            }
         }
     }
 }

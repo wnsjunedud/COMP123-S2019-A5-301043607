@@ -28,35 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ProductDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ProductDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 37;
-            this.dataGridView1.Size = new System.Drawing.Size(774, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.ProductDataGridView.AllowUserToAddRows = false;
+            this.ProductDataGridView.AllowUserToDeleteRows = false;
+            this.ProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDataGridView.Location = new System.Drawing.Point(12, 146);
+            this.ProductDataGridView.Name = "ProductDataGridView";
+            this.ProductDataGridView.ReadOnly = true;
+            this.ProductDataGridView.RowTemplate.Height = 37;
+            this.ProductDataGridView.Size = new System.Drawing.Size(774, 359);
+            this.ProductDataGridView.TabIndex = 0;
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.ProductDataGridView);
             this.Name = "SelectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelectForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.SelectForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProductDataGridView;
     }
 }
